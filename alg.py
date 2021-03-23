@@ -5,10 +5,11 @@ def invert(c):
 class Checker:
     def __init__(self, graph):
         self.graph = graph
-        self.coloring = []
+        self.coloring = [0] * graph.size
         self.flag = True
-        for i in range(len(graph.points)):
-            self.coloring.append(0)
+        # visited = [False] * V
+        # for i in range(len(graph.points)):
+        #     self.coloring.append(0)
 
     def color_dfs(self, v, color):
         self.coloring[v] = color
